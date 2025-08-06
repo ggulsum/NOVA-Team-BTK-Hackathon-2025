@@ -1,70 +1,50 @@
-# Getting Started with Create React App
+# Ürün Açıklayıcı ve Pazarlama Öneri Sistemi — React Arayüzü
+## Özet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Bu React tabanlı arayüz, e-ticaret satıcılarının ürün görsellerinden yola çıkarak ürün açıklaması, kategoriye özel pazarlama önerileri ve SEO uyumlu başlık & hashtagler elde etmesini sağlar.
+Kullanıcı dostu tasarımı sayesinde teknik bilgiye sahip olmayan kişiler bile kolayca içerik üretebilir.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## Temel Özellikler
+**Dil Seçimi —** Türkçe ve İngilizce destekler.
 
-### `npm start`
+**Görsel Yükleme —** Ürün fotoğrafını sisteme yükleyebilme.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+**Anında Önizleme —** Yüklenen görselin arayüzde önizlenmesi.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+**Ürün Açıklaması —** Görsel analizi sonrası yapay zeka tarafından oluşturulur.
 
-### `npm test`
+**Kategoriye Özel Pazarlama Önerileri —** 3 adet ilgi çekici pazarlama cümlesi sunar.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+**SEO İçeriği —** SEO uyumlu başlık ve 5 adet hashtag üretir.
 
-### `npm run build`
+**Tek Tıkla Kopyalama —** Her çıktı, kopyalama butonu ile panoya alınabilir.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Arayüz Akışı
+### Görsel Yükleme
+- Kullanıcı "Dosya Seç" butonuyla görsel yükler.
+- Yüklenen görsel arayüzde önizlenir.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Dil Seçimi
+- Kullanıcı çıktıların Türkçe mi İngilizce mi olacağını belirler.
 
-### `npm run eject`
+### Gönder Butonu
+- Spring Boot API’ye görsel gönderilir, Google Gemini ile açıklama üretilir.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Pazarlama ve SEO İçeriği
+- LangChain servisiyle kategori tahmini yapılır, 3 pazarlama önerisi ve SEO içeriği döner.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Sonuçların Görüntülenmesi
+- Ürün açıklaması, pazarlama önerileri ve SEO çıktıları ayrı kutucuklarda gösterilir.
+- Her kutucukta kopyalama butonu bulunur.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+---
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Backend Entegrasyonu
+**Spring Boot Servisi —** Görsel analizi ve ürün açıklaması üretimi.
 
-## Learn More
+**FastAPI LangChain Servisi —** Kategori tahmini, pazarlama önerisi ve SEO içeriği.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
