@@ -1,4 +1,4 @@
-# Ürün Açıklayıcı ve Pazarlama Öneri Sistemi — React Arayüzü
+# React Arayüzü
 ## Özet
 
 Bu React tabanlı arayüz, e-ticaret satıcılarının ürün görsellerinden yola çıkarak ürün açıklaması, kategoriye özel pazarlama önerileri ve SEO uyumlu başlık & hashtagler elde etmesini sağlar.
