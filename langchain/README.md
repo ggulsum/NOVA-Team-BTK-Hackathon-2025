@@ -1,4 +1,4 @@
-# LangChain Servisi — Doğal Dil İşleme Modülü
+# LangChain Servisi 
 
 ## Özet
 LangChain servisi, ürün görsellerinden elde edilen açıklamaları işleyerek **kategori tahmini**, **kategoriye özel pazarlama metni** ve **SEO uyumlu başlık & hashtag** üretimi yapar.  
